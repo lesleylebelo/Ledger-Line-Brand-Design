@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ledgerline — Developer Handoff</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-900:#17233F; --navy-700:#2E3F63; --amber:#E2A339;
+    --paper:#F3F4F1; --paper-raised:#FFFFFF; --charcoal:#23262B;
+    --mist:#ADB4C0; --mist-light:#DFE2E7;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--charcoal); font-family:'IBM Plex Sans',sans-serif; line-height:1.65;}
+  .wrap{max-width:920px; margin:0 auto; padding:0 32px;}
+  .head{background:var(--navy-900); color:var(--paper); padding:56px 0 40px;}
+  .head .doctype{color:var(--amber); font-family:'IBM Plex Mono',monospace; font-size:13px; margin-bottom:12px;}
+  .head h1{font-family:'Space Grotesk',sans-serif; font-size:34px; font-weight:600; margin:0;}
+  .head p{color:#C6CCDD; max-width:560px; margin-top:14px; font-size:15px;}
+  main{padding:48px 0 80px;}
+  h2.section-title{font-family:'Space Grotesk',sans-serif; font-size:22px; color:var(--navy-900); margin:0 0 20px; padding-top:44px; border-top:1px solid var(--mist-light);}
+  h2.section-title:first-of-type{border-top:none; padding-top:0;}
+  p.note{font-size:14.5px; color:var(--navy-700); max-width:640px; margin-bottom:24px;}
+  table{width:100%; border-collapse:collapse; margin-bottom:8px; font-size:14px;}
+  th{text-align:left; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--navy-700); text-transform:uppercase; letter-spacing:0.03em; padding:8px 12px; background:var(--mist-light); border-bottom:1px solid var(--mist-light);}
+  td{padding:10px 12px; border-bottom:1px solid var(--mist-light); vertical-align:top;}
+  tr:nth-child(even) td{background:var(--paper-raised);}
+  code{font-family:'IBM Plex Mono',monospace; font-size:12.5px; background:var(--mist-light); padding:2px 5px; border-radius:2px;}
+  .swatch-row{display:flex; gap:14px; margin:16px 0 28px; flex-wrap:wrap;}
+  .swatch{width:120px;}
+  .swatch .chip{height:52px; border-radius:3px; margin-bottom:6px;}
+  .swatch .name{font-size:12.5px; font-weight:500; color:var(--navy-900);}
+  .swatch .val{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--navy-700);}
+  .state-strip{display:flex; gap:16px; flex-wrap:wrap; margin:16px 0 28px;}
+  .state-item{text-align:center;}
+  .state-item .cap{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--navy-700); margin-top:8px;}
+  .btn-demo{display:inline-flex; align-items:center; justify-content:center; font-family:'IBM Plex Sans',sans-serif; font-weight:500; font-size:14px; padding:11px 20px; border-radius:4px; border:1.5px solid transparent;}
+  .btn-default{background:var(--amber); color:var(--navy-900);}
+  .btn-hover{background:#C48B2A; color:var(--navy-900);}
+  .btn-focus{background:var(--amber); color:var(--navy-900); outline:2px solid var(--navy-900); outline-offset:2px;}
+  .btn-disabled{background:var(--mist-light); color:var(--mist); cursor:not-allowed;}
+  .field-demo{width:200px; font-family:'IBM Plex Sans',sans-serif; font-size:14px; padding:11px 12px; border-radius:4px; border:1.5px solid var(--mist); background:var(--paper-raised);}
+  .field-focus{border-color:var(--navy-900); box-shadow:0 0 0 3px rgba(23,35,63,0.12);}
+  .field-error{border-color:#B3402F;}
+  .field-success{border-color:#3C7A5E;}
+</style>
+</head>
+<body>
+  <div class="head">
+    <div class="wrap">
+      <div class="doctype">Developer Handoff — v1.0</div>
+      <h1>Ledgerline UI — implementation spec</h1>
+      <p>Everything a developer needs to build or extend the Ledgerline marketing site without asking the designer follow-up questions. Paired with the working reference build in <code>/web-development</code>.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <main>
+
+      <h2 class="section-title">1. Colour tokens</h2>
+      <p class="note">Implemented as CSS custom properties on <code>:root</code> in <code>styles.css</code>. Never hard-code hex values in component code — reference the variable.</p>
+      <div class="swatch-row">
+        <div class="swatch"><div class="chip" style="background:#17233F;"></div><div class="name">--navy-900</div><div class="val">#17233F</div></div>
+        <div class="swatch"><div class="chip" style="background:#2E3F63;"></div><div class="name">--navy-700</div><div class="val">#2E3F63</div></div>
+        <div class="swatch"><div class="chip" style="background:#4C5E88;"></div><div class="name">--navy-500</div><div class="val">#4C5E88</div></div>
+        <div class="swatch"><div class="chip" style="background:#E2A339;"></div><div class="name">--amber</div><div class="val">#E2A339</div></div>
+        <div class="swatch"><div class="chip" style="background:#F3F4F1; border:1px solid #DFE2E7;"></div><div class="name">--paper</div><div class="val">#F3F4F1</div></div>
+        <div class="swatch"><div class="chip" style="background:#ADB4C0;"></div><div class="name">--mist</div><div class="val">#ADB4C0</div></div>
+        <div class="swatch"><div class="chip" style="background:#DFE2E7;"></div><div class="name">--mist-light</div><div class="val">#DFE2E7</div></div>
+        <div class="swatch"><div class="chip" style="background:#23262B;"></div><div class="name">--charcoal</div><div class="val">#23262B</div></div>
+      </div>
+      <table>
+        <tr><th>Semantic use</th><th>Token</th></tr>
+        <tr><td>Body text</td><td><code>--charcoal</code> on <code>--paper</code> — contrast ratio 12.6:1</td></tr>
+        <tr><td>Primary CTA</td><td><code>--amber</code> background, <code>--navy-900</code> text — 6.1:1</td></tr>
+        <tr><td>Dark sections (proof band, CTA band, footer nav on dark)</td><td><code>--navy-900</code> background, <code>--paper</code> text — 13.8:1</td></tr>
+        <tr><td>Error state</td><td><code>#B3402F</code> border/text on white — not tokenised, single use</td></tr>
+        <tr><td>Success state</td><td><code>#3C7A5E</code> border/text on white — not tokenised, single use</td></tr>
+      </table>
+
+      <h2 class="section-title">2. Typography</h2>
+      <table>
+        <tr><th>Role</th><th>Font</th><th>Weight</th><th>Size / line-height</th></tr>
+        <tr><td>H1 (hero)</td><td>Space Grotesk</td><td>600</td><td>34px/1.15 mobile → 46px/1.15 desktop (≥900px)</td></tr>
+        <tr><td>H2 (section title)</td><td>Space Grotesk</td><td>600</td><td>26px/1.2</td></tr>
+        <tr><td>H3 (card title)</td><td>Space Grotesk</td><td>500</td><td>15.5–17px/1.3</td></tr>
+        <tr><td>Body</td><td>IBM Plex Sans</td><td>400</td><td>16px/1.6 (14.5px in dense cards)</td></tr>
+        <tr><td>UI labels / nav</td><td>IBM Plex Sans</td><td>500</td><td>14–15px/1.4</td></tr>
+        <tr><td>Meta / section labels</td><td>IBM Plex Mono</td><td>400</td><td>11–12px, used sparingly — never for body copy</td></tr>
+      </table>
+      <p class="note">Font stack in code: <code>font-family:'Space Grotesk','Carlito',sans-serif;</code> for display, <code>'IBM Plex Sans','Carlito',sans-serif;</code> for body. <code>Carlito</code> is the local fallback used in this build's offline PDF/screenshot exports — in a browser with internet access, Google Fonts load first and Carlito is never seen.</p>
+
+      <h2 class="section-title">3. Spacing</h2>
+      <p class="note">Base unit is <strong>4px</strong>. Section and component spacing is built from multiples of it rather than arbitrary values.</p>
+      <table>
+        <tr><th>Token</th><th>Value</th><th>Typical use</th></tr>
+        <tr><td>xs</td><td>8px</td><td>Icon-to-label gaps, tight inline spacing</td></tr>
+        <tr><td>sm</td><td>16px</td><td>Card internal padding (compact), form field gaps</td></tr>
+        <tr><td>md</td><td>24px</td><td>Card padding, grid gaps</td></tr>
+        <tr><td>lg</td><td>36–48px</td><td>Space between a heading and the content below it</td></tr>
+        <tr><td>xl</td><td>52–64px</td><td>Vertical padding between full sections</td></tr>
+      </table>
+      <p class="note">Page content is constrained to a <code>max-width: 1200px</code> wrapper (<code>.wrap</code>) with 24px horizontal padding at all sizes, so it never touches the viewport edge.</p>
+
+      <h2 class="section-title">4. Buttons — states</h2>
+      <div class="state-strip">
+        <div class="state-item"><span class="btn-demo btn-default">Book a demo</span><div class="cap">Default</div></div>
+        <div class="state-item"><span class="btn-demo btn-hover">Book a demo</span><div class="cap">Hover</div></div>
+        <div class="state-item"><span class="btn-demo btn-focus">Book a demo</span><div class="cap">Focus-visible</div></div>
+        <div class="state-item"><span class="btn-demo btn-disabled">Book a demo</span><div class="cap">Disabled</div></div>
+      </div>
+      <table>
+        <tr><th>State</th><th>Implementation</th></tr>
+        <tr><td>Default</td><td><code>.btn-primary</code> — background <code>--amber</code>, text <code>--navy-900</code></td></tr>
+        <tr><td>Hover</td><td>Background darkens to <code>#C48B2A</code> (<code>--amber-dark</code>) via <code>:hover</code></td></tr>
+        <tr><td>Focus</td><td><code>:focus-visible</code> only (not <code>:focus</code>) — 2px solid <code>--navy-900</code> outline, 2px offset. Keyboard users only; no outline on mouse click.</td></tr>
+        <tr><td>Disabled</td><td><code>:disabled</code> / <code>[aria-disabled="true"]</code> — flat <code>--mist-light</code> background, <code>--mist</code> text, <code>cursor:not-allowed</code>, hover suppressed</td></tr>
+      </table>
+
+      <h2 class="section-title">5. Form fields — states</h2>
+      <div class="state-strip">
+        <div class="state-item"><input class="field-demo" placeholder="Default" readonly><div class="cap">Default</div></div>
+        <div class="state-item"><input class="field-demo field-focus" placeholder="Focused" readonly><div class="cap">Focus</div></div>
+        <div class="state-item"><input class="field-demo field-error" placeholder="Error" readonly><div class="cap">Error</div></div>
+        <div class="state-item"><input class="field-demo field-success" placeholder="Valid" readonly><div class="cap">Success</div></div>
+      </div>
+      <table>
+        <tr><th>State</th><th>Trigger</th><th>Visual</th></tr>
+        <tr><td>Default</td><td>—</td><td>1.5px <code>--mist</code> border</td></tr>
+        <tr><td>Hover</td><td>Pointer over field</td><td>Border darkens to <code>--navy-500</code></td></tr>
+        <tr><td>Focus</td><td>Keyboard or click focus</td><td>Border <code>--navy-900</code> + 3px soft ring, <code>box-shadow:0 0 0 3px rgba(23,35,63,0.12)</code></td></tr>
+        <tr><td>Error</td><td>Client-side validation fails on submit (see <code>script.js</code>)</td><td><code>.has-error</code> class on <code>.field-group</code> — border <code>#B3402F</code>, help text turns red and states the problem</td></tr>
+        <tr><td>Success</td><td>Available as <code>.has-success</code> for real-time positive validation (not currently triggered in the demo build — reserved for a future inline "email available" style check)</td><td>Border <code>#3C7A5E</code></td></tr>
+        <tr><td>Disabled</td><td><code>disabled</code> attribute</td><td><code>--paper</code> background, <code>--mist</code> text, not editable</td></tr>
+      </table>
+      <p class="note">Validation is deliberately simple and client-side only, appropriate for a portfolio demo: required-field checks plus a basic email pattern. A production build would add server-side validation and not rely on the client alone.</p>
+
+      <h2 class="section-title">6. Responsive behaviour</h2>
+      <table>
+        <tr><th>Breakpoint</th><th>Min-width</th><th>Key changes</th></tr>
+        <tr><td>Mobile (base)</td><td>0px</td><td>Single-column stacking throughout. Nav collapses to hamburger + slide-down menu. Hero visual moves below copy.</td></tr>
+        <tr><td>Tablet</td><td>700px</td><td>Benefit cards move to 3-column grid; feature cards to 2-column; contact form fields pair up (<code>.form-row-2</code>).</td></tr>
+        <tr><td>Desktop nav</td><td>900px</td><td>Full nav links + CTA button appear; hamburger hidden. Hero becomes a 2-column grid (copy + visual side by side).</td></tr>
+        <tr><td>Desktop wide</td><td>1000px</td><td>Feature grid moves to 3 columns.</td></tr>
+        <tr><td>Contact layout</td><td>960px</td><td>Contact page splits into sidebar + form columns (0.9fr / 1.4fr).</td></tr>
+      </table>
+      <p class="note">Approach: base styles target mobile; each rule is added, not overridden, at wider breakpoints via <code>min-width</code> media queries — a mobile-first cascade rather than a desktop-first one that gets stripped down.</p>
+
+      <h2 class="section-title">7. Component specifications</h2>
+      <table>
+        <tr><th>Component</th><th>Spec</th></tr>
+        <tr><td>Nav</td><td>Sticky (<code>position:sticky; top:0</code>), 72px effective height, translucent paper background with 6px backdrop blur so content is legible scrolling underneath it.</td></tr>
+        <tr><td>Benefit card</td><td>White background, 3px solid <code>--amber</code> left border only (not a full border) — 24px padding.</td></tr>
+        <tr><td>Feature card</td><td>Sits in a shared-border grid: 1px <code>--mist-light</code> gaps simulate borders between cards without doubling border weight at shared edges.</td></tr>
+        <tr><td>Pill (industry tag)</td><td><code>border-radius:20px</code>, <code>--mist-light</code> background, 8px/16px padding.</td></tr>
+        <tr><td>Proof band / CTA band</td><td>Full-bleed <code>--navy-900</code> background, content constrained to the same 1200px <code>.wrap</code>.</td></tr>
+        <tr><td>Industry tabs</td><td>Horizontally scrollable pill row on narrow viewports (<code>overflow-x:auto</code>) rather than wrapping — keeps tab labels on one line at all widths.</td></tr>
+      </table>
+
+      <h2 class="section-title">8. Image &amp; web asset specifications</h2>
+      <table>
+        <tr><th>Asset</th><th>Format</th><th>Notes</th></tr>
+        <tr><td>Logo (nav, footer)</td><td>Inline SVG</td><td>Kept as markup, not an <code>&lt;img&gt;</code>, so its colours can be swapped per-context (light/dark) without exporting separate files.</td></tr>
+        <tr><td>Favicon / app icon</td><td>SVG source in <code>/brand/logo/icon-app.svg</code></td><td>Export to 16, 32, 180 (apple-touch), 512px PNG for production <code>&lt;link&gt;</code> tags — not generated in this build.</td></tr>
+        <tr><td>Feature/nav icons</td><td>Inline SVG, 24–40px viewBox</td><td>2.5px stroke weight, no fill, rounded caps — matches the logo's own construction rules.</td></tr>
+        <tr><td>Hero visual</td><td>Coded CSS/SVG, not a raster image</td><td>Keeps the hero crisp at any resolution and avoids a large image download on first paint.</td></tr>
+        <tr><td>Duotone photography (campaign assets)</td><td>JPG/WEBP, navy-to-amber duotone treatment applied at export</td><td>Not used on the coded site in this build — reserved for the Resources/blog area in a fuller build-out.</td></tr>
+      </table>
+
+      <h2 class="section-title">9. From design to HTML/CSS — translation notes</h2>
+      <p class="note">
+        Every colour and most spacing values live as CSS custom properties in <code>:root</code>, mirroring the tokens in the Brand Guidelines document — a developer implementing this from Figma would define the same variable set before writing a single component. Layout is CSS Grid for card groups and Flexbox for one-dimensional rows (nav, button groups, footer columns). No CSS framework is used — utility-class bloat was traded for a small, purpose-built stylesheet that stays legible at this project's scale. Markup uses semantic landmarks throughout (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code> implied by section structure, <code>&lt;footer&gt;</code>), and interactive JS (nav toggle, tab switching, form validation) is isolated in <code>script.js</code>, unminified and commented, rather than inlined per page.
+      </p>
+      <p class="note" style="margin-bottom:0;">
+        <strong>If this were rebuilt in React:</strong> six components fall out of the existing markup almost directly — <code>&lt;Nav /&gt;</code> (owns mobile-menu open state), <code>&lt;Hero /&gt;</code>, <code>&lt;FeatureCard /&gt;</code> (mapped from a data array rather than repeated markup), <code>&lt;IndustryTabs /&gt;</code> (owns active-tab state, currently vanilla JS toggling <code>display</code>), <code>&lt;DemoForm /&gt;</code> (owns field values and validation state, currently manual DOM queries in <code>script.js</code>), and <code>&lt;Footer /&gt;</code>. The CSS custom property system would carry over unchanged as a design-token layer regardless of framework.
+      </p>
+
+    </main>
+  </div>
+</body>
+</html>

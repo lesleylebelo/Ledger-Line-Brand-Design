@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a demo — Ledgerline</title>
+<meta name="description" content="Book a 20-minute walkthrough of Ledgerline for your wholesale, distribution, merchant or retail business.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .contact-layout{display:grid; gap:36px;}
+  .contact-side h2{font-size:26px; margin-bottom:14px;}
+  .contact-side p{color:var(--navy-700); font-size:15px; max-width:400px;}
+  .contact-side ul{list-style:none; margin:28px 0 0; padding:0;}
+  .contact-side li{display:flex; gap:10px; align-items:flex-start; margin-bottom:16px; font-size:14px; color:var(--navy-700);}
+  .contact-side li svg{flex-shrink:0; margin-top:2px;}
+  form{background:var(--paper-raised); padding:32px; border-left:3px solid var(--amber);}
+  .form-row{display:grid; gap:0;}
+  @media (min-width:700px){.form-row-2{grid-template-columns:1fr 1fr; gap:20px;}}
+  @media (min-width:960px){.contact-layout{grid-template-columns:0.9fr 1.4fr;}}
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg width="22" height="22" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#17233F"/><polyline points="14,20 38,20" fill="none" stroke="#7E8CAE" stroke-width="5" stroke-linecap="round"/><polyline points="14,32 44,32" fill="none" stroke="#B7BFD3" stroke-width="5" stroke-linecap="round"/><polyline points="14,44 38,44 50,29" fill="none" stroke="#E2A339" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>ledgerline</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="#form" class="btn btn-outline-dark nav-cta">Book a demo</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="solutions.html">Solutions</a>
+    <a href="#">About</a>
+    <a href="#">Resources</a>
+    <a href="contact.html">Contact</a>
+    <a href="#form" class="btn btn-primary">Book a demo</a>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:8px;">
+  <div class="wrap">
+    <div class="section-label">Contact</div>
+    <h1 style="font-size:32px; max-width:520px;">See it on your own numbers.</h1>
+    <p class="lede" style="max-width:480px;">Tell us a little about your business and we'll set up a 20-minute walkthrough — no generic sales deck, just the parts of Ledgerline relevant to you.</p>
+  </div>
+</section>
+
+<section id="form" style="padding-top:12px;">
+  <div class="wrap contact-layout">
+
+    <div class="contact-side">
+      <h2>What to expect</h2>
+      <p>A short call with someone who'll actually ask about how your business runs, not read from a script.</p>
+      <ul>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#E2A339" stroke-width="2"/><path d="M8 12l3 3 5-6" fill="none" stroke="#E2A339" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>20 minutes, focused on your industry — wholesale, distribution, merchant or retail.</span>
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#E2A339" stroke-width="2"/><path d="M8 12l3 3 5-6" fill="none" stroke="#E2A339" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>No obligation, and no follow-up calls unless you ask for them.</span>
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#E2A339" stroke-width="2"/><path d="M8 12l3 3 5-6" fill="none" stroke="#E2A339" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>We'll follow up by email within one working day.</span>
+        </li>
+      </ul>
+    </div>
+
+    <form id="demoForm" novalidate>
+      <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+
+      <div class="form-row form-row-2" style="display:grid; gap:0 20px;">
+        <div class="field-group">
+          <label for="name">Full name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" autocomplete="name" placeholder="Priya Nathan">
+          <div class="help" data-default="">This is how we'll address you.</div>
+        </div>
+        <div class="field-group">
+          <label for="company">Company <span class="required">*</span></label>
+          <input type="text" id="company" name="company" autocomplete="organization" placeholder="Northgate Wholesale Ltd.">
+          <div class="help" data-default=""></div>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label for="email">Work email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" placeholder="priya@yourcompany.com">
+        <div class="help" data-default="We'll send the walkthrough invite here.">We'll send the walkthrough invite here.</div>
+      </div>
+
+      <div class="field-group">
+        <label for="industry">Industry</label>
+        <select id="industry" name="industry" style="width:100%; font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--charcoal); background:var(--paper-raised); border:1.5px solid var(--mist); border-radius:var(--radius-m); padding:12px 14px;">
+          <option>Wholesale</option>
+          <option>Distribution</option>
+          <option>Merchants</option>
+          <option>Retail</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label for="message">What's slowing you down today? <span style="color:var(--mist); font-weight:400;">(optional)</span></label>
+        <textarea id="message" name="message" placeholder="e.g. we reconcile stock across three spreadsheets before every order run..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Request my walkthrough</button>
+    </form>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <svg width="20" height="20" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#17233F"/><polyline points="14,20 38,20" fill="none" stroke="#7E8CAE" stroke-width="5" stroke-linecap="round"/><polyline points="14,32 44,32" fill="none" stroke="#B7BFD3" stroke-width="5" stroke-linecap="round"/><polyline points="14,44 38,44 50,29" fill="none" stroke="#E2A339" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>ledgerline</span>
+        </a>
+        <p>One system for everything that moves through your business.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul><li><a href="solutions.html">Solutions</a></li><li><a href="#">Pricing</a></li><li><a href="#">Integrations</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul><li><a href="#">Guides</a></li><li><a href="#">Blog</a></li><li><a href="#">Support</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ledgerline. Fictional product, self-initiated portfolio project.</span>
+      <span>Privacy · Terms</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

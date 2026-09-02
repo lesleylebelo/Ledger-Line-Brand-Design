@@ -1,0 +1,6 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ledgerline app icon">
+  <rect width="64" height="64" rx="14" fill="#17233F"/>
+  <polyline points="14,20 38,20" fill="none" stroke="#7E8CAE" stroke-width="5" stroke-linecap="round"/>
+  <polyline points="14,32 44,32" fill="none" stroke="#B7BFD3" stroke-width="5" stroke-linecap="round"/>
+  <polyline points="14,44 38,44 50,29" fill="none" stroke="#E2A339" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

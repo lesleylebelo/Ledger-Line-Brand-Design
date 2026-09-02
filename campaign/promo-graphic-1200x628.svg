@@ -1,0 +1,29 @@
+<svg viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap');
+      .display{font-family:'Space Grotesk', sans-serif;}
+      .text{font-family:'IBM Plex Sans', sans-serif;}
+    </style>
+    <linearGradient id="duo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#17233F"/>
+      <stop offset="100%" stop-color="#2E3F63"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="628" fill="url(#duo)"/>
+
+  <g transform="translate(80,70)">
+    <polyline points="0,10 22,10" fill="none" stroke="#7E8CAE" stroke-width="4" stroke-linecap="round"/>
+    <polyline points="0,20 28,20" fill="none" stroke="#B7BFD3" stroke-width="4" stroke-linecap="round"/>
+    <polyline points="0,30 22,30 32,17" fill="none" stroke="#E2A339" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="46" y="27" class="display" font-size="22" font-weight="500" fill="#F3F4F1">ledgerline</text>
+  </g>
+
+  <text x="80" y="300" class="display" font-size="58" font-weight="600" fill="#F3F4F1">
+    <tspan x="80" dy="0">Stock counted by hand.</tspan>
+    <tspan x="80" dy="70">Orders on spreadsheets.</tspan>
+    <tspan x="80" dy="70" fill="#E2A339">Sound familiar?</tspan>
+  </text>
+
+  <text x="80" y="565" class="text" font-size="24" fill="#C6CCDD">Every line adds up with Ledgerline.</text>
+</svg>

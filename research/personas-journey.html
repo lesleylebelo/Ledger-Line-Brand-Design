@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ledgerline — Personas &amp; User Journey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-900:#17233F; --navy-700:#2E3F63; --amber:#E2A339;
+    --paper:#F3F4F1; --paper-raised:#FFFFFF; --charcoal:#23262B;
+    --mist:#ADB4C0; --mist-light:#DFE2E7;
+  }
+  *{box-sizing:border-box; font-family:'Space Grotesk','Carlito',sans-serif;}
+  body{margin:0; background:var(--paper); color:var(--charcoal); font-family:'IBM Plex Sans','Carlito',sans-serif; line-height:1.6;}
+  .wrap{max-width:920px; margin:0 auto; padding:0 32px;}
+  .head{background:var(--navy-900); color:var(--paper); padding:56px 0 40px;}
+  .head .doctype{color:var(--amber); font-family:'IBM Plex Mono','DejaVu Sans Mono',monospace; font-size:13px; margin-bottom:12px;}
+  .head h1{font-size:34px; font-weight:600; margin:0;}
+  main{padding:56px 0 80px;}
+  h2.section-title{font-size:22px; color:var(--navy-900); margin:0 0 24px;}
+
+  .personas{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:64px;}
+  .persona{background:var(--paper-raised); padding:28px; border-top:3px solid var(--amber);}
+  .persona .role{font-family:'IBM Plex Mono','DejaVu Sans Mono',monospace; font-size:12px; color:var(--navy-700); margin-bottom:6px;}
+  .persona h3{font-size:22px; color:var(--navy-900); margin:0 0 4px;}
+  .persona .tagline{font-size:13.5px; color:var(--navy-700); margin-bottom:18px; font-style:italic; font-family:'IBM Plex Sans',sans-serif;}
+  .persona dl{margin:0;}
+  .persona dt{font-family:'IBM Plex Mono','DejaVu Sans Mono',monospace; font-size:11px; color:var(--amber); margin-top:16px; margin-bottom:4px;}
+  .persona dd{margin:0; font-size:14px; color:var(--charcoal); font-family:'IBM Plex Sans',sans-serif;}
+
+  .journey{margin-bottom:20px;}
+  .journey-track{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--mist-light); border:1px solid var(--mist-light);}
+  .journey-step{background:var(--paper-raised); padding:22px 20px; position:relative;}
+  .journey-step .stage{font-family:'IBM Plex Mono','DejaVu Sans Mono',monospace; font-size:11px; color:var(--navy-700); margin-bottom:8px;}
+  .journey-step h4{font-size:15px; color:var(--navy-900); margin:0 0 8px; font-family:'Space Grotesk',sans-serif;}
+  .journey-step p{font-size:13px; color:var(--charcoal); margin:0; font-family:'IBM Plex Sans',sans-serif;}
+  .journey-step .touch{margin-top:10px; font-size:11.5px; color:var(--amber);}
+</style>
+</head>
+<body>
+  <div class="head">
+    <div class="wrap">
+      <div class="doctype">UX Research</div>
+      <h1>Personas &amp; primary user journey</h1>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <main>
+      <h2 class="section-title">Personas</h2>
+      <div class="personas">
+        <div class="persona">
+          <div class="role">Economic buyer</div>
+          <h3>Priya Nathan</h3>
+          <div class="tagline">"I don't need more features. I need to trust the number on my screen."</div>
+          <dl>
+            <dt>Role</dt><dd>Operations Director, mid-size wholesale distributor (40 staff)</dd>
+            <dt>Goals</dt><dd>Reduce manual reconciliation, get a reliable stock and pricing picture across branches, avoid a painful implementation</dd>
+            <dt>Frustrations</dt><dd>Every vendor demo looks the same; past ERP rollout took six months and staff never fully adopted it</dd>
+            <dt>What earns her attention</dt><dd>Plain language, a fast path to a real demo, evidence the product understands trade businesses specifically</dd>
+          </dl>
+        </div>
+        <div class="persona">
+          <div class="role">Daily user</div>
+          <h3>Tom Ridley</h3>
+          <div class="tagline">"If it slows me down on the warehouse floor, I'll go back to the spreadsheet."</div>
+          <dl>
+            <dt>Role</dt><dd>Warehouse &amp; Ops Supervisor</dd>
+            <dt>Goals</dt><dd>Update stock and process orders quickly, with minimal training, without the system getting in his way</dd>
+            <dt>Frustrations</dt><dd>Cluttered legacy interfaces, features he doesn't need, systems that assume desk-based, not floor-based, work</dd>
+            <dt>What earns his attention</dt><dd>Speed and clarity, not marketing — he'll never see the homepage, but every decision made for Priya has to hold up for him too</dd>
+          </dl>
+        </div>
+      </div>
+
+      <h2 class="section-title">Primary journey — from cold visit to demo request</h2>
+      <p style="max-width:640px; color:var(--navy-700); margin-top:-10px; margin-bottom:28px;">Mapped for Priya, the economic buyer, since she's the one who initiates contact. Each stage maps directly to a homepage section — see the information architecture for the structural version of this journey.</p>
+      <div class="journey">
+        <div class="journey-track">
+          <div class="journey-step">
+            <div class="stage">01 — Arrive</div>
+            <h4>Lands on homepage</h4>
+            <p>From a search, a LinkedIn ad, or a colleague's referral. Skeptical, has seen a dozen ERP sites before.</p>
+            <div class="touch">Hero + product intro</div>
+          </div>
+          <div class="journey-step">
+            <div class="stage">02 — Evaluate</div>
+            <h4>Scans for relevance</h4>
+            <p>Checks whether this is built for a business like hers, not generic enterprise software.</p>
+            <div class="touch">Industries served + benefits</div>
+          </div>
+          <div class="journey-step">
+            <div class="stage">03 — Build trust</div>
+            <h4>Looks for proof</h4>
+            <p>Wants evidence this actually works day-to-day, not just marketing claims.</p>
+            <div class="touch">Capability band + testimonial</div>
+          </div>
+          <div class="journey-step">
+            <div class="stage">04 — Act</div>
+            <h4>Requests a demo</h4>
+            <p>Ready to commit 20 minutes, not a sales call — the CTA has to promise something specific and low-risk.</p>
+            <div class="touch">CTA band + demo form</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>

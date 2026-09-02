@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ledgerline — A4 Brochure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  @page{ size:A4; margin:0; }
+  *{box-sizing:border-box;}
+  html,body{margin:0; padding:0;}
+  body{
+    width:210mm; height:297mm;
+    font-family:'IBM Plex Sans', sans-serif;
+    color:#23262B;
+    background:#F3F4F1;
+    position:relative;
+  }
+  .page{ width:210mm; height:297mm; padding:16mm 16mm 14mm; position:relative; }
+
+  .top-bar{ display:flex; justify-content:space-between; align-items:center; margin-bottom:14mm; }
+  .logo{ display:flex; align-items:center; gap:8px; }
+  .logo span{ font-family:'Space Grotesk','Carlito',sans-serif; font-weight:500; font-size:15px; color:#17233F; }
+  .doc-tag{ font-family:'IBM Plex Mono','DejaVu Sans Mono',monospace; font-size:10px; color:#4C5E88; }
+
+  .hero h1{
+    font-family:'Space Grotesk','Carlito',sans-serif; font-weight:600; font-size:40px; color:#17233F;
+    margin:0 0 6px; line-height:1.12; max-width:130mm;
+  }
+  .hero p.lede{ font-size:14.5px; color:#2E3F63; max-width:120mm; margin:0 0 10mm; }
+
+  .benefits{ display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; margin-bottom:11mm; }
+  .benefit{ background:#FFFFFF; padding:6mm; border-left:2px solid #E2A339; }
+  .benefit h3{ font-family:'Space Grotesk','Carlito',sans-serif; font-size:13.5px; color:#17233F; margin:0 0 4px; }
+  .benefit p{ font-size:11.5px; color:#2E3F63; margin:0; line-height:1.5; }
+
+  .industries{ margin-bottom:11mm; }
+  .industries .label{ font-family:'IBM Plex Mono','DejaVu Sans Mono',monospace; font-size:10px; color:#4C5E88; margin-bottom:5px; }
+  .industry-row{ display:flex; gap:8px; flex-wrap:wrap; }
+  .industry-pill{ background:#DFE2E7; color:#17233F; font-size:11px; padding:4px 10px; border-radius:2px; }
+
+  .stats{ display:flex; background:#17233F; padding:7mm 6mm; margin-bottom:11mm; }
+  .stat{ flex:1; text-align:left; padding-right:8mm; }
+  .stat .num{ font-family:'Space Grotesk','Carlito',sans-serif; font-weight:600; font-size:25px; color:#F3F4F1; }
+  .stat .cap{ font-size:10px; color:#9AA5C0; margin-top:2px; }
+
+  .quote{ background:#FFFFFF; padding:7mm 8mm; border-left:2px solid #17233F; margin-bottom:11mm; }
+  .quote p{ font-family:'Space Grotesk','Carlito',sans-serif; font-size:15px; color:#17233F; margin:0 0 6px; font-weight:500; }
+  .quote span{ font-size:11px; color:#4C5E88; }
+
+  .cta-row{ display:flex; justify-content:space-between; align-items:center; }
+  .cta-left h3{ font-family:'Space Grotesk','Carlito',sans-serif; font-size:16px; color:#17233F; margin:0 0 3px; }
+  .cta-left p{ font-size:11px; color:#4C5E88; margin:0; }
+  .cta-btn{ background:#E2A339; color:#17233F; font-family:'IBM Plex Sans','Carlito',sans-serif; font-weight:500; font-size:12px; padding:9px 18px; border-radius:3px; white-space:nowrap; }
+
+  .foot{ position:absolute; bottom:12mm; left:16mm; right:16mm; border-top:1px solid #DFE2E7; padding-top:5mm; display:flex; justify-content:space-between; font-size:10px; color:#8B93A1; }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="top-bar">
+      <div class="logo">
+        <svg width="20" height="20" viewBox="0 0 64 64"><polyline points="10,18 40,18" fill="none" stroke="#4C5E88" stroke-width="6" stroke-linecap="round"/><polyline points="10,32 48,32" fill="none" stroke="#2E3F63" stroke-width="6" stroke-linecap="round"/><polyline points="10,46 40,46 54,29" fill="none" stroke="#E2A339" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>ledgerline</span>
+      </div>
+      <div class="doc-tag">Solutions overview — Wholesale &amp; Distribution</div>
+    </div>
+
+    <div class="hero">
+      <h1>Every line adds up.</h1>
+      <p class="lede">One system for everything that moves through your business — stock, orders, pricing and people. No more reconciling five spreadsheets before you trust a single number.</p>
+    </div>
+
+    <div class="benefits">
+      <div class="benefit">
+        <h3>One source of truth</h3>
+        <p>Stock, pricing and orders live in a single system, so every team is working from the same numbers.</p>
+      </div>
+      <div class="benefit">
+        <h3>Built for trade</h3>
+        <p>Designed around how wholesalers and distributors actually operate — not adapted from generic accounting software.</p>
+      </div>
+      <div class="benefit">
+        <h3>Fast to learn</h3>
+        <p>A clear, modern interface your team can use from day one, without weeks of retraining.</p>
+      </div>
+    </div>
+
+    <div class="industries">
+      <div class="label">Built for</div>
+      <div class="industry-row">
+        <span class="industry-pill">Wholesalers</span>
+        <span class="industry-pill">Distributors</span>
+        <span class="industry-pill">Merchants</span>
+        <span class="industry-pill">Retailers</span>
+        <span class="industry-pill">Suppliers</span>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num">1</div><div class="cap">system replacing scattered spreadsheets</div></div>
+      <div class="stat"><div class="num">4</div><div class="cap">core functions unified — stock, orders, pricing, people</div></div>
+      <div class="stat"><div class="num">100%</div><div class="cap">of your team working from the same numbers</div></div>
+    </div>
+
+    <div class="quote">
+      <p>"We stopped asking whose spreadsheet was right, because there's only one number now."</p>
+      <span>Illustrative example — for portfolio purposes only, not a real customer quote</span>
+    </div>
+
+    <div class="cta-row">
+      <div class="cta-left">
+        <h3>See it on your own numbers</h3>
+        <p>Book a 20-minute walkthrough with our team.</p>
+      </div>
+      <div class="cta-btn">Book a demo</div>
+    </div>
+
+    <div class="foot">
+      <span>ledgerline.example — fictional product for portfolio purposes</span>
+      <span>Page 1 of 1</span>
+    </div>
+
+  </div>
+</body>
+</html>

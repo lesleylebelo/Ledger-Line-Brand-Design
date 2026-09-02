@@ -1,0 +1,29 @@
+<svg viewBox="0 0 300 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap');
+      .display{font-family:'Space Grotesk', sans-serif;}
+      .text{font-family:'IBM Plex Sans', sans-serif;}
+    </style>
+  </defs>
+  <rect width="300" height="250" fill="#F3F4F1"/>
+  <rect width="300" height="250" fill="none" stroke="#DFE2E7" stroke-width="1"/>
+
+  <g transform="translate(20,20)">
+    <polyline points="0,8 16,8" fill="none" stroke="#4C5E88" stroke-width="3.5" stroke-linecap="round"/>
+    <polyline points="0,16 20,16" fill="none" stroke="#2E3F63" stroke-width="3.5" stroke-linecap="round"/>
+    <polyline points="0,24 16,24 24,13" fill="none" stroke="#E2A339" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="34" y="21" class="display" font-size="15" font-weight="500" fill="#17233F">ledgerline</text>
+  </g>
+
+  <text x="20" y="98" class="display" font-size="24" font-weight="600" fill="#17233F">Stock. Orders.</text>
+  <text x="20" y="128" class="display" font-size="24" font-weight="600" fill="#17233F">Pricing. One</text>
+  <text x="20" y="158" class="display" font-size="24" font-weight="600" fill="#E2A339">system.</text>
+
+  <text x="20" y="188" class="text" font-size="13" fill="#2E3F63">Every line adds up with Ledgerline.</text>
+
+  <g transform="translate(20,204)">
+    <rect width="140" height="32" rx="3" fill="#17233F"/>
+    <text x="70" y="21" text-anchor="middle" class="text" font-size="13" font-weight="500" fill="#F3F4F1">See Ledgerline</text>
+  </g>
+</svg>

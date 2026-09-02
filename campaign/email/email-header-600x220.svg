@@ -1,0 +1,23 @@
+<svg viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap');
+      .display{font-family:'Space Grotesk', sans-serif;}
+      .text{font-family:'IBM Plex Sans', sans-serif;}
+    </style>
+  </defs>
+  <rect width="600" height="220" fill="#F3F4F1"/>
+
+  <g transform="translate(36,32)">
+    <polyline points="0,8 17,8" fill="none" stroke="#4C5E88" stroke-width="3.5" stroke-linecap="round"/>
+    <polyline points="0,16 21,16" fill="none" stroke="#2E3F63" stroke-width="3.5" stroke-linecap="round"/>
+    <polyline points="0,24 17,24 25,13" fill="none" stroke="#E2A339" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="36" y="21" class="display" font-size="16" font-weight="500" fill="#17233F">ledgerline</text>
+  </g>
+
+  <text x="36" y="120" class="display" font-size="34" font-weight="600" fill="#17233F">Every line adds up.</text>
+  <text x="36" y="155" class="text" font-size="16" fill="#2E3F63">One system for stock, orders, pricing and people —</text>
+  <text x="36" y="177" class="text" font-size="16" fill="#2E3F63">see it for yourself.</text>
+
+  <polyline points="440,150 500,150 540,100" fill="none" stroke="#E2A339" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap');
+      .display{font-family:'Space Grotesk', sans-serif;}
+      .text{font-family:'IBM Plex Sans', sans-serif;}
+    </style>
+  </defs>
+  <rect width="1200" height="300" fill="#17233F"/>
+
+  <g opacity="0.5" transform="translate(760,40)">
+    <polyline points="0,60 200,60" fill="none" stroke="#2E3F63" stroke-width="10" stroke-linecap="round"/>
+    <polyline points="0,110 280,110" fill="none" stroke="#2E3F63" stroke-width="10" stroke-linecap="round"/>
+    <polyline points="0,160 200,160 320,60" fill="none" stroke="#E2A339" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="80" y="140" class="display" font-size="52" font-weight="600" fill="#F3F4F1">Every line adds up.</text>
+  <text x="80" y="182" class="text" font-size="20" fill="#C6CCDD">One system for stock, orders, pricing and people.</text>
+
+  <g transform="translate(80,210)">
+    <rect width="180" height="50" rx="4" fill="#E2A339"/>
+    <text x="90" y="32" text-anchor="middle" class="text" font-size="15" font-weight="500" fill="#17233F">Book a demo</text>
+  </g>
+</svg>

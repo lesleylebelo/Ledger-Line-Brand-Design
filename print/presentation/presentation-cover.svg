@@ -1,0 +1,26 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap');
+      .display{font-family:'Space Grotesk', sans-serif;}
+      .text{font-family:'IBM Plex Sans', sans-serif;}
+      .mono{font-family:'IBM Plex Mono', monospace;}
+    </style>
+  </defs>
+  <rect width="960" height="540" fill="#F3F4F1"/>
+  <rect x="0" y="0" width="960" height="8" fill="#E2A339"/>
+
+  <g transform="translate(72,64)">
+    <polyline points="0,10 22,10" fill="none" stroke="#4C5E88" stroke-width="4" stroke-linecap="round"/>
+    <polyline points="0,20 28,20" fill="none" stroke="#2E3F63" stroke-width="4" stroke-linecap="round"/>
+    <polyline points="0,30 22,30 32,17" fill="none" stroke="#E2A339" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="46" y="27" class="display" font-size="22" font-weight="500" fill="#17233F">ledgerline</text>
+  </g>
+
+  <text x="72" y="270" class="display" font-size="54" font-weight="600" fill="#17233F">Every line adds up.</text>
+  <text x="72" y="320" class="text" font-size="20" fill="#2E3F63">One system for stock, orders, pricing and people.</text>
+
+  <line x1="72" y1="420" x2="888" y2="420" stroke="#DFE2E7" stroke-width="1"/>
+  <text x="72" y="460" class="mono" font-size="13" fill="#4C5E88">Sales &amp; solutions overview</text>
+  <text x="888" y="460" text-anchor="end" class="mono" font-size="13" fill="#4C5E88">Q3 2026</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg viewBox="0 0 728 90" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap');
+      .display{font-family:'Space Grotesk', sans-serif;}
+      .text{font-family:'IBM Plex Sans', sans-serif;}
+    </style>
+  </defs>
+  <rect width="728" height="90" fill="#17233F"/>
+
+  <g transform="translate(24,29)">
+    <polyline points="0,7 15,7" fill="none" stroke="#7E8CAE" stroke-width="3" stroke-linecap="round"/>
+    <polyline points="0,14 19,14" fill="none" stroke="#B7BFD3" stroke-width="3" stroke-linecap="round"/>
+    <polyline points="0,21 15,21 22,11" fill="none" stroke="#E2A339" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="60" y="55" class="display" font-size="26" font-weight="600" fill="#F3F4F1">Every line adds up.</text>
+
+  <g transform="translate(560,26)">
+    <rect width="148" height="38" rx="4" fill="#E2A339"/>
+    <text x="74" y="24" text-anchor="middle" class="text" font-size="14" font-weight="500" fill="#17233F">Book a demo</text>
+  </g>
+</svg>

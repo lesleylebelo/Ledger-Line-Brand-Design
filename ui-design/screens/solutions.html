@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solutions — Ledgerline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg width="22" height="22" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#17233F"/><polyline points="14,20 38,20" fill="none" stroke="#7E8CAE" stroke-width="5" stroke-linecap="round"/><polyline points="14,32 44,32" fill="none" stroke="#B7BFD3" stroke-width="5" stroke-linecap="round"/><polyline points="14,44 38,44 50,29" fill="none" stroke="#E2A339" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>ledgerline</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="solutions.html" class="active">Solutions</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Resources</a></li>
+    </ul>
+    <a href="index.html#demo" class="btn btn-outline-dark nav-cta">Book a demo</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="solutions.html">Solutions</a>
+    <a href="#">About</a>
+    <a href="#">Resources</a>
+    <a href="index.html#demo" class="btn btn-primary">Book a demo</a>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:12px;">
+  <div class="wrap">
+    <div class="section-label">Solutions</div>
+    <h1 style="font-size:34px; max-width:600px;">One system, shaped around your part of the trade.</h1>
+    <p class="lede" style="max-width:520px;">Ledgerline works the same way underneath for every business — the difference is which parts of it matter most to you.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="industry-tabs" role="tablist" aria-label="Industries">
+      <button class="industry-tab active" data-target="wholesale">Wholesale</button>
+      <button class="industry-tab" data-target="distribution">Distribution</button>
+      <button class="industry-tab" data-target="merchants">Merchants</button>
+      <button class="industry-tab" data-target="retail">Retail</button>
+    </div>
+
+    <div class="industry-detail" id="panel-wholesale">
+      <h3>Wholesale</h3>
+      <p>Bulk pricing, minimum order quantities and customer-specific price lists — set up once in Ledgerline and applied automatically at the point of sale.</p>
+      <ul>
+        <li>Tiered and customer-specific pricing without spreadsheet lookups</li>
+        <li>Bulk order entry built for speed, not retail-style checkouts</li>
+        <li>Live stock visibility so you never sell what you don't have</li>
+      </ul>
+    </div>
+    <div class="industry-detail" id="panel-distribution" style="display:none;">
+      <h3>Distribution</h3>
+      <p>Multi-branch stock, route-ready order batching, and a single view of inventory across every warehouse you run.</p>
+      <ul>
+        <li>Real-time stock across every branch and vehicle</li>
+        <li>Batch and route orders for efficient delivery days</li>
+        <li>Automatic reordering thresholds by location</li>
+      </ul>
+    </div>
+    <div class="industry-detail" id="panel-merchants" style="display:none;">
+      <h3>Merchants</h3>
+      <p>Flexible catalogue management for businesses selling across multiple channels, with pricing and stock that stay in sync everywhere.</p>
+      <ul>
+        <li>One catalogue, multiple sales channels</li>
+        <li>Channel-specific pricing without duplicate data entry</li>
+        <li>Consolidated reporting across every outlet</li>
+      </ul>
+    </div>
+    <div class="industry-detail" id="panel-retail" style="display:none;">
+      <h3>Retail</h3>
+      <p>Point-of-sale-ready stock counts, simple staff workflows, and reporting that tells you what's actually selling.</p>
+      <ul>
+        <li>Stock counts that stay accurate at the till, not just in the back office</li>
+        <li>A simple enough interface for seasonal and part-time staff</li>
+        <li>Plain-language sales reporting, not raw data exports</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="demo">
+  <div class="wrap cta-band-inner">
+    <div>
+      <h2>Not sure which fits your business?</h2>
+      <p>Tell us how you operate and we'll show you the parts of Ledgerline that matter most.</p>
+    </div>
+    <a href="index.html#demo" class="btn btn-primary">Book a demo</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <svg width="20" height="20" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#17233F"/><polyline points="14,20 38,20" fill="none" stroke="#7E8CAE" stroke-width="5" stroke-linecap="round"/><polyline points="14,32 44,32" fill="none" stroke="#B7BFD3" stroke-width="5" stroke-linecap="round"/><polyline points="14,44 38,44 50,29" fill="none" stroke="#E2A339" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>ledgerline</span>
+        </a>
+        <p>One system for everything that moves through your business.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul><li><a href="solutions.html">Solutions</a></li><li><a href="#">Pricing</a></li><li><a href="#">Integrations</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Contact</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul><li><a href="#">Guides</a></li><li><a href="#">Blog</a></li><li><a href="#">Support</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ledgerline. Fictional product, self-initiated portfolio project.</span>
+      <span>Privacy · Terms</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('mobileMenu');
+  toggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  const tabs = document.querySelectorAll('.industry-tab');
+  const panels = {
+    wholesale: document.getElementById('panel-wholesale'),
+    distribution: document.getElementById('panel-distribution'),
+    merchants: document.getElementById('panel-merchants'),
+    retail: document.getElementById('panel-retail'),
+  };
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      Object.values(panels).forEach(p => p.style.display = 'none');
+      panels[tab.dataset.target].style.display = 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
